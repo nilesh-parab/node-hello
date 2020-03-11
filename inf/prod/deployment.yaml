@@ -28,7 +28,7 @@ spec:
         deployedBy: deploy-node-app
     spec:
       containers:
-        - image: 'nileshparab/nodejs:df256ce-1583920403'
+        - image: 'nileshparab/nodejs:dc09a22-1583921697'
           imagePullPolicy: Always
           name: nodejs
           env:
