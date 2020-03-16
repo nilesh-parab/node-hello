@@ -1,0 +1,109 @@
+Check running containers
+	docker ps
+
+Stop a running container
+	docker stop <container_id>
+
+List docker images
+	docker images
+	
+Remove docker images
+	docker rmi <image_id> <image_id2>
+	docker rmi -f <image_id> <image_id2>
+
+Build a docker image
+	docker build <directory-of-dockerfile> -t <image_name>:<tag_name>
+	
+Run a container off an image
+	docker run <image_name>:<tag_name>
+	docker run -d <image_name>:<tag_name>
+	docker run -d -p <host_port1>:<container_port1> -p <host_port2>:<container_port2> <image_name>:<tag_name>
+
+Tag a local image
+	docker tag <image_id> docker.io/<username>/<image_name>:<tag_name>
+	
+Push a local image to dockerhub
+	docker push docker.io/<username>/<image_name>:<tag_name>
+
+Pull a remote docker image
+	docker pull docker.io/<username>/<image_name>:<tag_name>
+
+View logs of a container
+	docker logs <container_id>
+
+SSH into a running container
+	docker exec -it <container_id> /bin/bash
+
+--------------------------- KUBERNETES -------------------------------------------
+Check minikube installation
+	minikube version
+
+Check kubectl installation
+	kubectl version
+
+Check cluster status
+	minikube status
+
+Stop cluster
+	minikube stop
+
+Check minikube IP
+	minikube ip
+	
+Delete cluster
+	minikube delete
+
+Start a new cluster
+	minikube start
+
+Start cluster dashboard
+	minikube dashboard
+
+Check nodes in a cluster
+	kubectl get nodes
+
+Create a deployment
+	kubectl create deployment <deployment_name> --image=<image_name>:<image_tag>
+	kubectl create -f pod.yaml
+
+Check created deployments
+	kubectl get deployments
+
+Check running pods
+	kubectl get pods
+
+Check all details of pod
+	kubectl describe pods
+	kubectl describe pod/<pod_name>
+
+Check logs of a POD
+	kubectl logs <pod_name>
+
+Check environment variables of a pod
+	kubectl exec <pod_name> env
+
+SSH into a pod
+	kubectl exec -it <pod_name> bash
+
+Check services
+	kubectl get services
+
+Expose service from deployment
+	kubectl expose deployment/<deployment_name> --type="NodePort" --port <port>
+	kubectl expose deployment/<deployment_name> --type=LoadBalancer --port <port>
+
+Remove a service
+	kubectl delete services <service_name>
+	kubectl delete services --all
+	
+Check the replicasets for a deployment
+	kubectl get rs
+
+To scale up/down deployment - to check use kubectl get deployments 
+	kubectl scale deployment/<deployment_name> --replicas=4
+
+To update/rollback the image of running deployment
+	kubectl set image deployments/<deployment_name> <image_name>=<username>/<image_name>:<tag_name>
+
+Remove a deployment
+	kubectl delete deployments --all

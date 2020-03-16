@@ -1,4 +1,0 @@
-bases: []
-resources:
-  - deployment.yaml
-  - service.yaml

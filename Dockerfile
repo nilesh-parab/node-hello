@@ -20,4 +20,6 @@ RUN npm install --production --no-cache --no-audit
 
 COPY . /app/
 
+EXPOSE 8080
+
 CMD ["node", "src/index.js"]
