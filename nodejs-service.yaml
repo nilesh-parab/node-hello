@@ -8,4 +8,4 @@ spec:
     app: nodejs
   ports:
     - port: 8080
-  type: LoadBalancer
+  type: ClusterIP

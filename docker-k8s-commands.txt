@@ -66,6 +66,9 @@ Create a deployment
 	kubectl create deployment <deployment_name> --image=<image_name>:<image_tag>
 	kubectl create -f pod.yaml
 
+Update a deployment
+	kubectl apply -f pod.yaml
+
 Check created deployments
 	kubectl get deployments
 
@@ -128,4 +131,6 @@ To check k8s minikube docker environment
 	minikube docker-env
 To point your shell to k8s minikube docker
 	minikube docker-env -- follow instructions in it
-	
+
+To check ingress
+	kubectl get ingress
