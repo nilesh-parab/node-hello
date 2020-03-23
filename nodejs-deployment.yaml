@@ -17,14 +17,14 @@ spec:
     spec:
       containers:
         - name: nodejs
-          image: docker.io/nileshparab/nodejs:v1.0.2
+          image: docker.io/nileshparab/nodejs:v1.0.4
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
           resources:
             requests:
               memory: 64Mi
-              cpu: 250m
+              cpu: 1m
             limits:
               memory: 128Mi
-              cpu: 500m
+              cpu: 10m
