@@ -107,3 +107,25 @@ To update/rollback the image of running deployment
 
 Remove a deployment
 	kubectl delete deployments --all
+
+To create a namespace
+	create yaml then 
+	kubectl create -f namespace.yaml
+
+To list contexts
+	kubectl config view
+
+To check current context
+	kubectl config current-context
+
+To create new context
+	kubectl config set-context <context_name> --namespace=<namespace> --cluster=<cluster_name> --user=<user_name>
+
+To switch context
+	kubectl config use-context <context_name>
+
+To check k8s minikube docker environment
+	minikube docker-env
+To point your shell to k8s minikube docker
+	minikube docker-env -- follow instructions in it
+	
